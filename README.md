@@ -43,3 +43,51 @@
 ---
 
 ## 📂 **Structure du Projet**
+📦com.example.tvseriesexplorer
+├── 📂 data                          # Couche données
+│   ├── 📄 api/
+│   │   └── TvSeriesApi.kt          # Déclaration des endpoints Retrofit
+│   ├── 📄 model/
+│   │   ├── TvShow.kt                # Data class pour une série (liste)
+│   │   └── TvShowDetail.kt          # Data class pour les détails
+│   └── 📄 repository/
+│       └── TvSeriesRepository.kt   # Logique métier + appels API
+│
+├── 📂 di                            # Injection de dépendances
+│   └── 📄 AppModule.kt              # Fournit Retrofit, Repository, etc.
+│
+├── 📂 ui                            # Couche présentation
+│   ├── 📄 theme/
+│   │   └── Theme.kt                # Couleurs, typographie, formes
+│   ├── 📄 screens/
+│   │   ├── HomeScreen.kt           # Écran d'accueil (liste + recherche)
+│   │   ├── DetailScreen.kt         # Écran de détails
+│   │   └── components/             # Composables réutilisables (ex: TvShowCard)
+│   └── 📄 MainActivity.kt          # Point d'entrée (setup Navigation)
+│
+└── 📂 viewmodel                     # Logique métier
+    └── 📄 TvSeriesViewModel.kt     # États (UiState) et logiques
+
+---
+
+## 🚀 **Installation & Lancement**
+### **Prérequis**
+- Android Studio **Koala ou supérieur**.
+- Un appareil/émulateur avec **Android 8.0 (Oreo) ou plus**.
+
+### **Étapes**
+1. **Cloner le dépôt** :
+   ```bash
+   git clone https://github.com/votre-utilisateur/TV-Series-Explorer.git
+
+Ouvrir dans Android Studio :
+Lancer Android Studio → File → Open → Sélectionner le dossier du projet.
+
+
+Synchroniser Gradle :
+Attendre que les dépendances se téléchargent (vérifier build.gradle).
+
+
+Lancer l'application :
+Brancher un appareil ou lancer un émulateur (Pixel 5 recommandé).
+Cliquer sur ▶️ (Run).
